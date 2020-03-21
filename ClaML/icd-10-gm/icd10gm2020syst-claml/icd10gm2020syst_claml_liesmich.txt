@@ -1,0 +1,233 @@
+ICD-10-GM, Systematisches Verzeichnis
+Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme, 10. Revision
+- German Modification -
+
+Herausgegeben vom Deutschen Institut für Medizinische Dokumentation und Information (DIMDI), Köln, 
+im Auftrag des Bundesministeriums für Gesundheit (BMG)
+unter Beteiligung der Arbeitsgruppe ICD des Kuratoriums für Fragen der Klassifikation im Gesundheitswesen (KKG)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+LIESMICHDATEI
+
+ICD-10-GM Version 2020      (OID 1.2.276.0.76.5.486)
+Systematisches Verzeichnis   ClaML/XML
+
+
+Stand der Klassifikation:      20.09.2019
+
+
+Das Standdatum entspricht dem Stand der Klassifikationsdateien bei der Erstveröffentlichung einer neuen Jahresversion. 
+Werden die Dateien nach der Erstveröffentlichung unterjährig aufgrund von Fehlerkorrekturen oder nachträglichen Ergänzungen geändert und neu publiziert, wird zusätzlich das Aktualisierungsdatum angegeben.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+INHALT DES ZIP-FILES  icd10gm2020syst-claml.zip:
+
+  - icd10gm2020syst_claml_liesmich.txt
+ 
+  - Ordner VERTRAGSBEDINGUNGEN 
+    Downloadbedingungen
+    Impressum
+
+  - Ordner KLASSIFIKATIONSDATEIEN 
+    ClaML.dtd
+    icd10gm2020syst_claml_20190920.xml
+
+  - claml-kurzdokumentation-20190901.pdf
+
+  - Ordner ZUSATZDATEIEN
+    icd10gm2020syst_01_vor_titelblatt.pdf
+    icd10gm2020syst_02_vor_inhaltsverzeichnis.pdf
+    icd10gm2020syst_03_vor_kommentar.pdf
+    icd10gm2020syst_04_vor_anleitung_zur_verschluesselung.pdf
+    icd10gm2020syst_05_anh_morphologie_neubildungen.pdf
+    icd10gm2020syst_06_anh_barthelindex.pdf
+    icd10gm2020syst_07_anh_erwbarthelindex.pdf
+    icd10gm2020syst_08_anh_frb_schoenle.pdf
+    icd10gm2020syst_09_anh_fim.pdf
+    icd10gm2020syst_10_anh_mmse.pdf
+    icd10gm2020syst_11_anh_adipositas.pdf
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Änderungen gegenüber den Vorjahren:
+
+Das Metadatum "RareDisease" zur Kennzeichnung von Krankheiten, die in Mitteleuropa sehr selten vorkommen, wurde in der ClaML-Fassung umbenannt in "Exotic", um eine Verwechslung mit den "Seltenen Erkrankungen" ("Rare Diseases"), also mit seltenen Leiden mit einer Prävalenz von nicht mehr als 5 von 10.000 Personen, zu vermeiden.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+HINWEISE ZUR REFERENZFASSUNG
+
+Die ICD-10-GM wird jedes Jahr in verschiedenen Fassungen und Formaten veröffentlicht.
+
+Verbindliche Referenzfassung einer Klassifikation ist jeweils das aktuell gültige Systematische Verzeichnis als PDF.
+Bei Unstimmigkeiten zwischen dem Systematischen Verzeichnis und dem Alphabetischen Verzeichnis ist das Systematische Verzeichnis maßgeblich.
+Bei Unstimmigkeiten zwischen den verschiedenen technischen Formaten des Systematischen bzw. des Alphabetischen Verzeichnisses ist die maßgebliche Referenzfassung jeweils das PDF.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+ClaML (Classification Markup Language)
+
+Grundlage dieser XML-Fassung ist ClaML (Classification Markup Language), eine spezielle XML-Notation für Klassifikationen, die bereits seit 2005 von der WHO eingesetzt wird und die 2007 als europäische Norm (DIN EN 14463:2008-02) akzeptiert wurde. 2012 wurde der europäische Standard durch die inhaltlich identische internationale Norm (DIN EN ISO 13120:2013-11) abgelöst.
+
+Die Datei ClaML.dtd enthält die Document Type Definitions und beschreibt die Dokumentstruktur für XML. 
+In der XML-Datei ist - unter weitgehendem Verzicht auf Layoutinformationen - die logische Struktur der ICD-10-GM genau beschrieben durch XML-Auszeichnung der Inhaltselemente nach der ClaML-Notation. Da sich aufgrund der Struktur der ICD-10-GM manche Layoutinformationen nicht komplett dtd-konform abbilden lassen, kann es beim Validieren der Datei zu Warnmeldungen kommen.
+
+Die Dateien können in jedem herkömmlichen Texteditor gelesen und bearbeitet werden. Sie sind primär zur maschinellen Weiterverarbeitung in XML-basierten Systemen gedacht und können von diesen direkt eingelesen werden. XML-Dateien können in jedes beliebige Format überführt werden; dazu muss in der Regel ein Umsetzungsprogramm geschrieben werden.
+
+Bitte beachten Sie hierzu auch die besonderen Hinweise weiter unten für die Datenübernahme der kodebezogenen Metadaten bei kombinierten Kodes.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+ClaML-KURZDOKUMENTATION
+
+Nähere Informationen zur ClaML-Notation finden Sie in der der ZIP-Datei beiliegenden Kurzdokumentation, in der die allgemeine Struktur, Bedeutung und Verwendung der ClaML-Elemente und -Attribute beschrieben werden. 
+Die für eine bestimmte Klassifikation verwendeten Elemente und Attribute ändern sich im Allgemeinen nicht.
+
+Kodebezogene Metadaten sind zusätzliche Informationen zu Kodes, die in der ClaML-Datei in <Meta>-Elementen, also als Unterelemente von <Class>- oder <ModifierClass>-Elementen, hinterlegt sind. Da sich die Metadaten ändern können, z.B. neue hinzukommen oder nicht mehr erforderliche gelöscht werden, werden sie in dieser versionsspezifischen Liesmich beschrieben. 
+
+Kodes und Werte dieser <Meta>-Elemente werden auch in einer besonderen TXT(CSV)-Fassung, den sog. Metadaten, publiziert. Sie finden diese Fassung unter Klassifikationen - Downloads auf der DIMDI-Website unter der jeweiligen Klassifikationsjahresversion, eine Liesmichdatei mit der Datensatzbeschreibung ist beigefügt.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Kodebezogene <Meta>-Elemente der vorliegenden ClaML-Fassung
+
+Die <Meta>-Elemente sind folgendermaßen aufgebaut:
+<Meta name=" " value=" "/>
+Jedes <Meta>-Element enthält zwei Attribute.
+Das Attribut name=" " enthält in Anführungszeichen einen für die Klassifikation spezifischen Namen des jeweiligen Metadatums.
+Das Attribut value=" " enthält in Anführungszeichen den für den jeweiligen Kode zutreffenden Wert.
+
+Nachfolgend werden unter den jeweiligen <Meta>-Elementen die Bedeutung und ggf. die zulässigen Werte der Metadaten beschrieben. Im Anschluss daran folgen weitere spezifische Informationen zu einzelnen Metadaten.
+
+Bei einer Diskrepanz zwischen dem Wert eines Metadatums von einem Kode und den Inhalten von Klassentitel und Klassenattributen (z.B. Hinweise) dieses Kodes haben stets die Einträge zum Kode in der amtlichen Referenzfassung, dem PDF des Systematischen Verzeichnisses, Vorrang.
+
+<Meta name="Para295" value=" "/>
+Verwendung der Schlüsselnummer nach Paragraph 295 
+P = zur Primärverschlüsselung zugelassene Schlüsselnummer
+O = nur als Sternschlüsselnummer zugelassen 
+Z = nur als Ausrufezeichenschlüsselnummer zugelassen 
+V = nicht zur Verschlüsselung zugelassen
+
+<Meta name="Para301" value=" "/>
+Verwendung der Schlüsselnummer nach Paragraph 301 
+P = zur Primärverschlüsselung zugelassen 
+O = nur als Sternschlüsselnummer zugelassen 
+Z = nur als Ausrufezeichenschlüsselnummer zugelassen 
+V = nicht zur Verschlüsselung zugelassen
+
+<Meta name="MortL1Code" value=" "/>
+Bezug zur Mortalitätsliste 1
+
+<Meta name="MortL2Code" value=" "/>
+Bezug zur Mortalitätsliste 2
+
+<Meta name="MortL3Code" value=" "/>
+Bezug zur Mortalitätsliste 3
+
+<Meta name="MortL4Code" value=" "/>
+Bezug zur Mortalitätsliste 4
+
+<Meta name="MortBCode" value=" "/>
+Bezug zur Morbiditätsliste
+
+<Meta name="SexCode" value=" "/>
+Geschlechtsbezug der Schlüsselnummer
+9 = kein Geschlechtsbezug
+M = männlich
+W = weiblich
+
+<Meta name="SexReject" value=" "/>
+Art des Fehlers bei Geschlechtsbezug
+9 = irrelevant
+K = Kann-Fehler
+
+<Meta name="AgeLow" value=" "/>
+untere Altersgrenze für eine Schlüsselnummer
+9999    = irrelevant
+t000 - t364 = ab 0 Tage einschließlich Fetalzeit - ab 364 Lebenstagen
+also t000 = ab Geburt (ab 1. Lebenstag) einschließlich Fetalzeit
+     t001 = ab 1 vollendeten Lebenstag (ab 2. Lebenstag)
+     t002 = ab 2 vollendeten Lebenstagen (ab 3. Lebenstag)
+     usw. bis
+     t028 = ab 28 vollendeten Lebenstagen (ab dem 29. Lebenstag, ab dem 2. Lebensmonat )
+     usw. bis
+     t364 = ab 364 vollendeten Lebenstagen (ab dem 365. Lebenstag  
+j001 - j124 = ab 1 Lebensjahr - ab 124 Lebensjahren
+also j001 = ab 1 vollendeten Lebensjahr (ab dem 2. Lebensjahr; ab 365 vollendeten Lebenstagen)
+     j002 = ab 2 vollendeten Lebensjahren (ab dem 3. Lebensjahr)
+     j003 = ab 3 vollendeten Lebensjahren (ab dem 4. Lebensjahr)
+     usw. bis
+     j124 = ab 124 vollendeten Lebensjahren (ab dem 125. Lebensjahr)
+
+<Meta name="AgeHigh" value=" "/>
+obere Altersgrenze für eine Schlüsselnummer
+9999    = irrelevant
+t000 - t364 = 0 Tage - bis zu 364 Tagen
+also t000 = fetal, vor der Geburt
+     t001 = bis zu 1 vollendeten Lebenstag (bis Ende des 1. Lebenstages)
+     t002 = bis zu 2 vollendeten Lebenstagen (bis Ende des 2. Lebenstages)
+     usw. bis
+     t364 = bis zu 364 vollendeten Lebenstagen (bis Ende des 364. Lebenstages)
+j001 - j124 = bis zu 1 Jahr – bis zu 124  Jahre
+also j001 = bis zu 1 vollendeten Lebensjahr (bis Ende des 1. Lebensjahres; bis zum Ende des 365. Lebenstages)
+     j002 = bis zu 2 vollendeten Lebensjahren (bis Ende des 2. Lebensjahres)
+     usw. bis
+     j124 = bis zu 124 vollendeten Lebensjahren (bis Ende des 124. Lebensjahres)
+
+<Meta name="AgeReject" value=" "/>
+Art des Fehlers bei Altersbezug
+9 = irrelevant
+M = Muss-Fehler
+K = Kann-Fehler
+
+<Meta name="Exotic" value=" "/>
+Krankheit in Mitteleuropa sehr selten? 
+J = Ja
+N = Nein
+
+<Meta name="Content" value=" "/>
+Schlüsselnummer mit Inhalt belegt?
+J = Ja
+N = Nein (--> Kann Fehler auslösen!)
+
+<Meta name="Infectious" value=" "/>
+IfSG-Meldung, kennzeichnet, dass bei Diagnosen, die mit dieser Schlüsselnummer kodiert sind, besonders auf die Arzt-Meldepflicht nach dem Infektionsschutzgesetz (IfSG) hinzuweisen ist
+J = Ja
+N = Nein
+
+<Meta name="EBMLabor" value=" "/>
+IfSG-Labor, kennzeichnet, dass bei Laboruntersuchungen zu diesen Diagnosen die Laborausschlussziffer des EBM (32006) gewählt werden kann
+J = Ja
+N = Nein
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Hinweise für die Datenübernahme für Umsetzungsprogramme der kodebezogenen Metadaten Para295 und Para301 bei kombinierten Kodes
+
+Für die Metadaten "Verwendung der Schlüsselnummern nach § 295 und § 301" (ambulanter Bereich, Feld 10 im Format Metadaten, und stationärer Bereich, Feld 11) gibt es wie bereits erwähnt folgende Ausprägungen: 
+
+P = zur Primärverschlüsselung zugelassene Schlüsselnummer 
+O = nur als Sternschlüsselnummer zugelassen 
+Z = nur als Ausrufezeichen-Schlüsselnummer zugelassen 
+V = nicht zur Verschlüsselung zugelassen
+
+Bitte beachten Sie, dass in Einzelfällen in kodespezifischen Hinweisen die Anwendung eines Kodes weiter eingeschränkt sein kann (z.B. Hinweis zu U69.0-! in der ICD-10-GM 2020).
+
+Grundsätzlich gilt für die Metadaten "Verwendung der Schlüsselnummern nach § 295 und § 301" Folgendes:
+
+1.	§ 295/§ 301: Endständige Drei-, Vier- und Fünfsteller sind generell auf P/O/Z gesetzt.
+2.	§ 295/§ 301: Nicht endständige Dreisteller sind generell auf V gesetzt, d.h. für beide Anwendungsbereiche nicht zugelassen.
+3.	§ 295: Nicht endständige Viersteller sind generell auf P/O/Z gesetzt.
+§ 301: Nicht endständige Viersteller sind generell auf V gesetzt, d.h. für den stationären Bereich nicht zugelassen.
+
+Normalerweise werden diese kodespezifischen Metadaten in der ClaML-Datei dem jeweiligen Kode (Class) mit Hilfe der Elemente Meta (<Meta name="Para295" value=" "/> und <Meta name="Para301" value=" "/>) sowie UsageKind (<UsageKind mark="*" name="aster"/> und <UsageKind mark="!" name="optional"/>) mitgegeben. 
+
+Dies ist nicht der Fall bei kombinierten Kodes, also bei Kodes, die mit Hilfe von Subklassifikationslisten (Modifiern) gebildet werden und nicht explizit als Vier- oder Fünfsteller-Class in der ClaML-Datei erscheinen. Hier sind Metadaten und UsageKind bei dem übergeordneten und noch zu kombinierenden, nicht endständigen Kode aufgeführt. 
+
+Für die Kennzeichnung der Verwendung kombinierter Kodes ist daher Folgendes zu beachten:
+
+1.	Es gilt die übliche XML-Vererbung der Eigenschaften, d.h. die Metadaten Para295 und Para301 und die UsageKind des übergeordneten, nicht endständigen Kodes sind auf die kombinierten Vier- bzw. Fünfsteller zu übertragen.
+2.	Dabei muss bei allen endständigen kombinierten Kodes ein vom nicht endständigen Kode für Para295 und Para301 übernommenes Kennzeichen V zu P umgesetzt werden. Dasselbe gilt für nicht endständige kombinierte Viersteller für Para295.
+3.	Ist die Verwendung des übergeordneten, nicht endständigen Kodes durch ein Element UsageKind weiter eingeschränkt, muss das P zu O (wenn es sich um usage="aster" handelt) oder zu Z (wenn es sich um usage="optional" handelt) umgesetzt werden.
