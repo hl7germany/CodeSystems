@@ -1,0 +1,11 @@
+packages:
+  - claml:
+      icd10gm:
+        - icd10gm2020:
+            clamlfile: source/ClaML/icd-10-gm/icd10gm2020syst-claml/Klassifikationsdateien/icd10gm2020syst_claml_20190920.xml
+            designations: preferredLong
+            outputFileName: codesystem-icd10gm-2020.json
+            url: http://hl7.org/fhir/sid/icd-10-gm
+            valueset: http://hl7.org/fhir/sid/icd-10-gm/vs
+
+
