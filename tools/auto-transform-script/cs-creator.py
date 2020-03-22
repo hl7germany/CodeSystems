@@ -6,7 +6,7 @@ def clamlconvert(claml):
   converter = claml["converter"]
   for key, value in claml["clamlPackages"].items():
     print('converting: ' + key)
-    os.system('java --version')
+    os.system('java -version')
     rv = os.system('java -jar tools/' + converter + ' -i ' + value[
       "clamlfile"] + ' -designations ' + value["designations"] + ' -o generated-resources/' + value[
                      "outputFolder"] + '/' + value["outputFileName"] + ' -id ' + key + ' -url ' + value[
