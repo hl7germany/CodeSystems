@@ -4,4 +4,5 @@ jdk:
   - openjdk13
 
 script:
+  - jdk_switcher use openjdk11
   - python3 tools/auto-transform-script/cs-creator.py
