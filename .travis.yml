@@ -1,0 +1,5 @@
+language: java
+jdk: openjdk11
+
+script:
+  - python3 tools/auto-transform-script/cs-creator.py
