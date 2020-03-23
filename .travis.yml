@@ -4,4 +4,4 @@ jdk:
   - openjdk13
 
 script:
-  - python3 tools/auto-transform-script/cs-creator.py
+  - /usr/bin/python3 tools/auto-transform-script/cs-creator.py
